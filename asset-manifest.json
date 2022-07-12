@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/flappy-bird-game/static/css/main.f35fdfe2.css",
-    "main.js": "/flappy-bird-game/static/js/main.3c9091bb.js",
+    "main.css": "/flappy-bird-game/static/css/main.8a65fb4a.css",
+    "main.js": "/flappy-bird-game/static/js/main.43f900aa.js",
     "static/js/787.b4dafdec.chunk.js": "/flappy-bird-game/static/js/787.b4dafdec.chunk.js",
-    "static/media/3.png": "/flappy-bird-game/static/media/3.8505438aee2452ee1537.png",
+    "static/media/4.png": "/flappy-bird-game/static/media/4.e3bf3ad03eb43dfada7b.png",
     "static/media/bird.png": "/flappy-bird-game/static/media/bird.99cea0884986d6f9cf71.png",
     "static/media/bg.png": "/flappy-bird-game/static/media/bg.9762b101b81f1de3a3ac.png",
     "index.html": "/flappy-bird-game/index.html",
-    "main.f35fdfe2.css.map": "/flappy-bird-game/static/css/main.f35fdfe2.css.map",
-    "main.3c9091bb.js.map": "/flappy-bird-game/static/js/main.3c9091bb.js.map",
+    "main.8a65fb4a.css.map": "/flappy-bird-game/static/css/main.8a65fb4a.css.map",
+    "main.43f900aa.js.map": "/flappy-bird-game/static/js/main.43f900aa.js.map",
     "787.b4dafdec.chunk.js.map": "/flappy-bird-game/static/js/787.b4dafdec.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f35fdfe2.css",
-    "static/js/main.3c9091bb.js"
+    "static/css/main.8a65fb4a.css",
+    "static/js/main.43f900aa.js"
   ]
 }
