@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/flappy-bird-game/static/css/main.f35fdfe2.css",
+    "main.js": "/flappy-bird-game/static/js/main.235530b9.js",
+    "static/js/787.b4dafdec.chunk.js": "/flappy-bird-game/static/js/787.b4dafdec.chunk.js",
+    "static/media/3.png": "/flappy-bird-game/static/media/3.8505438aee2452ee1537.png",
+    "static/media/bird.png": "/flappy-bird-game/static/media/bird.99cea0884986d6f9cf71.png",
+    "static/media/bg.png": "/flappy-bird-game/static/media/bg.9762b101b81f1de3a3ac.png",
+    "index.html": "/flappy-bird-game/index.html",
+    "main.f35fdfe2.css.map": "/flappy-bird-game/static/css/main.f35fdfe2.css.map",
+    "main.235530b9.js.map": "/flappy-bird-game/static/js/main.235530b9.js.map",
+    "787.b4dafdec.chunk.js.map": "/flappy-bird-game/static/js/787.b4dafdec.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f35fdfe2.css",
+    "static/js/main.235530b9.js"
+  ]
+}
