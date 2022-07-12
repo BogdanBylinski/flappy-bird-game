@@ -65,9 +65,9 @@ function App() {
     let newBirdPosition;
     if (birdPosition < height - birdSize && start === 1) {
       newBirdPosition = setInterval(() => {
-        setBirdPosition((birdPosition) => birdPosition + screenWidth/50);
+        setBirdPosition((birdPosition) => birdPosition + screenWidth/500);
         setRotate(20)
-      }, 24);
+      }, 4);
     }
 
     return () => {
@@ -78,7 +78,7 @@ function App() {
   
   const jump = () => {
     console.log(screenHeight/5);
-    let newBirdPosition = birdPosition - screenHeight/4;
+    let newBirdPosition = birdPosition - screenHeight/5;
     if (start === 0) {
       setScore(0)
       setStart(1);
