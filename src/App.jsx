@@ -11,15 +11,15 @@ function App() {
   
   let  toPX = require('to-px')
   const [height, width]= Resize()
-  // const [width, setScreenWidth] = useState(0)
-  // const [height, setScreenHeight] = useState(0)
-  const [birdSize, setBirdSize] = useState(width/50);
-  const [pipeWidth, setPipeWidth] = useState(width/25);
-  const [gap, setGap] = useState(width/5);
+  const [screenWidth, setScreenWidth] = useState(0)
+  const [screenHeight, setScreenHeight] = useState(0)
+  const [birdSize, setBirdSize] = useState(screenWidth/20);
+  const [pipeWidth, setPipeWidth] = useState(screenWidth/25);
+  const [gap, setGap] = useState(screenWidth/5);
   const [birdPosition, setBirdPosition] = useState(height/2 - birdSize);
   const [start, setStart] = useState(0);
   const [pipeHeight, setPipeHeight] = useState(100);
-  const [pipeLeft, setPipeLeft] = useState(width - pipeWidth);
+  const [pipeLeft, setPipeLeft] = useState(screenWidth - pipeWidth);
   const [rotate, setRotate] = useState(0)
   const [score, setScore] = useState(0)
   const bottomPipeHeight = height - pipeHeight - gap;
@@ -28,11 +28,13 @@ function App() {
 
 
   useEffect(()=>{
-    // setScreenWidth(width)
-    // setScreenHeight(height)
-    setBirdSize(width/50)
-    setPipeWidth(40)
+    setScreenWidth(width)
+    setScreenHeight(height)
+    setBirdSize(width/20)
+    setPipeWidth(screenWidth/50)
+    setPipeHeight(height/5)
     setGap(width/5)
+    setPipeLeft(screenWidth - pipeWidth)
   },[width, height])
 
 
@@ -63,7 +65,7 @@ function App() {
     let newBirdPosition;
     if (birdPosition < height - birdSize && start === 1) {
       newBirdPosition = setInterval(() => {
-        setBirdPosition((birdPosition) => birdPosition + 10);
+        setBirdPosition((birdPosition) => birdPosition + screenWidth/50);
         setRotate(20)
       }, 24);
     }
@@ -76,7 +78,7 @@ function App() {
   
   const jump = () => {
     console.log(width);
-    let newBirdPosition = birdPosition - height/5;
+    let newBirdPosition = birdPosition - screenHeight/5;
     if (start === 0) {
       setScore(0)
       setStart(1);
@@ -98,9 +100,9 @@ function App() {
   },[birdPosition, bottomPipeHeight, pipeHeight, pipeLeft]);
   return (
     <div className="App">
-      <div className="game__container" style={{width:width, height:height}} onClick={jump}>
+      <div className="game__container" style={{width:screenWidth, height:height}} onClick={jump}>
         <div className="score">{start===1?score:''}</div>
-        <div className="bird" style={{ top: `${birdPosition}px`,width:`${width/16}px`, height:`${height/16}px`, transform: `rotate(${rotate}deg)` }}></div>
+        <div className="bird" style={{ top: `${birdPosition}px`,width:`${birdSize}px`, height:`${birdSize}px`, transform: `rotate(${rotate}deg)` }}></div>
         <div
           className="obstacle top"
           style={{
