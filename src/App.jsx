@@ -31,11 +31,11 @@ function App() {
     setScreenWidth(width)
     setScreenHeight(height)
     setBirdSize(width/20)
-    setPipeWidth(screenWidth/50)
+    setPipeWidth(screenHeight/50)
     setPipeHeight(height/5)
-    setGap(width/5)
+    setGap(height/5)
     setPipeLeft(screenWidth - pipeWidth)
-  },[width, height])
+  },[width, height, screenWidth, pipeWidth])
 
 
 
@@ -77,8 +77,8 @@ function App() {
   }, [birdPosition, start]);
   
   const jump = () => {
-    console.log(width);
-    let newBirdPosition = birdPosition - screenHeight/5;
+    console.log(screenHeight/5);
+    let newBirdPosition = birdPosition - screenHeight/4;
     if (start === 0) {
       setScore(0)
       setStart(1);
