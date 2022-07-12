@@ -1,4 +1,5 @@
-html{
+
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');html{
     background-color: black;
 }
 .App{
@@ -22,9 +23,11 @@ overflow: hidden;
     background-size: cover;
     .score{
         position: absolute;
+        font-family: 'Creepster', cursive;
+        font-style: italic;
         z-index: 3;
-        top: 10px;
-        left: 20px;
+        top: 15px;
+        left: 35px;
         transform: translate(-50%, -50%);
     }
 
@@ -43,7 +46,7 @@ overflow: hidden;
 background-color: transparent;
 position: absolute;
 overflow: hidden;
-background-image: url(./assets/img/3.png) ;
+background-image: url(./assets/img/4.png) ;
     background-repeat: no-repeat;
     background-size: cover;
     &.top{

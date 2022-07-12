@@ -30,10 +30,10 @@ function App() {
   useEffect(()=>{
     setScreenWidth(width)
     setScreenHeight(height)
-    setBirdSize(width/20)
+    setBirdSize(width/(width>500? 40:20))
     setPipeWidth(screenHeight/50)
     setPipeHeight(height/5)
-    setGap(height/5)
+    setGap(height/4)
     setPipeLeft(screenWidth - pipeWidth)
   },[width, height, screenWidth, pipeWidth])
 
@@ -49,7 +49,7 @@ function App() {
     let pipePosition;
     if (start === 1 && pipeLeft >= 0 - pipeWidth) {
       pipePosition = setInterval(() => {
-        setPipeLeft((pipeLeft) => pipeLeft - 2);
+        setPipeLeft((pipeLeft) => pipeLeft - (width>500? 5:2));
       }, 24);
       return () => {
         clearInterval(pipePosition);
@@ -77,7 +77,7 @@ function App() {
   }, [birdPosition, start]);
   
   const jump = () => {
-    console.log(screenHeight/5);
+    console.log(screenHeight/6);
     let newBirdPosition = birdPosition - screenHeight/5;
     if (start === 0) {
       setScore(0)
@@ -101,7 +101,7 @@ function App() {
   return (
     <div className="App">
       <div className="game__container" style={{width:screenWidth, height:height}} onClick={jump}>
-        <div className="score">{start===1?score:''}</div>
+        <div className="score">Score: {start===1?score:'0'}</div>
         <div className="bird" style={{ top: `${birdPosition}px`,width:`${birdSize}px`, height:`${birdSize}px`, transform: `rotate(${rotate}deg)` }}></div>
         <div
           className="obstacle top"
